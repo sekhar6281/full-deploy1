@@ -8,15 +8,19 @@ app.use(express.json())
 
 let notes=[]
 
+app.get("/",(req,res)=>{
+res.send("Backend API Running Successfully")
+})
+
 app.get("/notes",(req,res)=>{
 res.json(notes)
 })
 
 app.post("/notes",(req,res)=>{
 notes.push(req.body.text)
-res.json({message:"added"})
+res.json({message:"note added"})
 })
 
 app.listen(5000,()=>{
-console.log("server running")
+console.log("Server running")
 })
