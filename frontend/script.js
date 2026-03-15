@@ -1,4 +1,4 @@
-const API="https://YOUR-BACKEND-URL"
+const API="https://notes-backend-gekb.onrender.com"
 
 async function loadNotes(){
 
